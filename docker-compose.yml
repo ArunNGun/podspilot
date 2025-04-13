@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  podpilot:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ~/.kube/config:/root/.kube/config:ro
+    environment:
+      - FUELIX_API_KEY=${FUELIX_API_KEY}
+      - FUELIX_API_URL=${FUELIX_API_URL}
+      - DEFAULT_MODEL=${DEFAULT_MODEL}
+    restart: unless-stopped

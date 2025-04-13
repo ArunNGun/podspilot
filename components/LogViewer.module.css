@@ -1,0 +1,93 @@
+.logViewerContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.logHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logHeader h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.logControls {
+  display: flex;
+  gap: 10px;
+}
+
+.controlButton {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.controlButton:hover:not(:disabled) {
+  background-color: #e9ecef;
+}
+
+.controlButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.controlButton.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.controlButton.active:hover {
+  background-color: #0069d9;
+}
+
+.logContent {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.logs {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.loading, .noLogs, .noPodSelected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.noLogs {
+  color: #6c757d;
+}
+
+.noPodSelected {
+  color: #6c757d;
+}
